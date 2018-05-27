@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
         'css/animate.css',
         'css/office/style.css',
         'css/office/font-awesome.css',
+        'css/office/main.css',
         'css/style.css',
         'fonts/font-awesome.min.css',
     ];

@@ -4,11 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -40,23 +36,20 @@ AppAsset::register($this);
         <div class="profile_details">
             <ul>
                 <li class="dropdown profile_details_drop">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <div class="profile_img">
-                            <span class="prfil-img"><img src="/frontend/web/images/p1.png" alt=""> </span>
+                            <span class="prfil-img"><img class="border-radius" src="/frontend/web/images/no-image.png" alt="avatar"></span>
                             <div class="user-name">
-                                <p>Malorum</p>
+                                <p><?php echo \Yii::$app->user->getIdentity()->username; ?></p>
                                 <span>Administrator</span>
                             </div>
-                            <i class="fa fa-angle-down lnr"></i>
-                            <i class="fa fa-angle-up lnr"></i>
-                            <div class="clearfix"></div>
                         </div>
                     </a>
-                    <ul class="dropdown-menu drp-mnu">
-                        <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
-                        <li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>
-                        <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
-                    </ul>
+<!--                    <ul class="dropdown-menu drp-mnu">-->
+<!--                        <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>-->
+<!--                        <li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>-->
+<!--                        <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>-->
+<!--                    </ul>-->
                 </li>
             </ul>
         </div>
@@ -67,8 +60,8 @@ AppAsset::register($this);
 <!-- End Header-->
 <div class="left-content">
     <div class="mother-grid-inner">
-        <div class="inner-block">
-
+        <div class="inner-block office-block">
+            <?= $content ?>
         </div>
     </div>
 </div>
@@ -78,38 +71,28 @@ AppAsset::register($this);
     <div class="menu">
         <ul id="menu" >
             <li id="menu-home" ><a href="/office"><i class="fa fa-home"></i><span>Кабинет</span></a></li>
-<!--            <li><a href="#"><i class="fa fa-cogs"></i><span>Components</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
-<!--                <ul>-->
-<!--                    <li><a href="grids.html">Grids</a></li>-->
-<!--                    <li><a href="portlet.html">Portlets</a></li>-->
-<!--                </ul>-->
-<!--            </li>-->
-            <li id="menu-comunicacao"><a href="office/deposits"><i class="fa fa-book nav_icon"></i><span>Мои инвестиции</span></a></li>
-<!--            <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Maps</span></a></li>-->
+
+            <li id="menu-deposits"><a href="/office/deposits"><i class="fa fa-book nav_icon"></i><span>Мои инвестиции</span></a></li>
+
             <li id="menu-academico" ><a style="cursor: pointer"><i class="fa fa-file-text"></i><span>Операции</span><span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul id="menu-academico-sub" >
-                    <li id="menu-academico-boletim" ><a href="office/payin">Пополнить баланс</a></li>
-                    <li id="menu-academico-avaliacoes" ><a href="office/payout">Вывод средств</a></li>
+                    <li id="payin" ><a href="/office/payin">Пополнить баланс</a></li>
+                    <li id="payouts" ><a href="/office/payout">Вывод средств</a></li>
                 </ul>
             </li>
 
-            <li><a href="office/history"><i class="fa fa-bar-chart"></i><span>История Операций</span></a></li>
+            <li><a href="/office/history"><i class="fa fa-bar-chart"></i><span>История Операций</span></a></li>
 
             <li><a style="cursor: pointer"><i class="fa fa-cog"></i><span>Профиль</span><span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul id="menu-academico-sub" >
-                    <li id="menu-academico-avaliacoes" ><a href="office/profile">Личные Данные</a></li>
-                    <li id="menu-academico-boletim" ><a href="office/security">Безопасность</a></li>
-                    <li id="menu-academico-boletim" ><a href="office/change_password">Изменить пароль</a></li>
-                    <li id="menu-academico-boletim" ><a href="office/payments">Платёжные реквизиты</a></li>
-                    <li id="menu-academico-boletim" ><a href="office/pin">PIN-Code</a></li>
+                    <li id="profile" ><a href="/office/profile">Личный Кабинет</a></li>
+                    <li id="security" ><a href="/office/security">Безопасность</a></li>
+                    <li id="change_password" ><a href="/office/change_password">Изменить пароль</a></li>
+                    <li id="payments" ><a href="/office/payments">Платёжные реквизиты</a></li>
+                    <li id="pin" ><a href="/office/pin">PIN-Code</a></li>
                 </ul>
             </li>
-<!--            <li><a href="#"><i class="fa fa-shopping-cart"></i><span>E-Commerce</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
-<!--                <ul id="menu-academico-sub" >-->
-<!--                    <li id="menu-academico-avaliacoes" ><a href="product.html">Product</a></li>-->
-<!--                    <li id="menu-academico-boletim" ><a href="price.html">Price</a></li>-->
-<!--                </ul>-->
-<!--            </li>-->
+            <li><a href=""><i class="fa fa-sign-out"></i><span>Выход</span></a></li>
         </ul>
     </div>
 </div>

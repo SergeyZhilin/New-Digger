@@ -13,6 +13,7 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
+            'class' => 'frontend\components\LangRequest',
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '',
         ],
@@ -41,12 +42,25 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'class'=>'frontend\components\LangUrlManager',
             'rules' => [
                 '' => 'site/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
-
+        'language'=>'ru-RU',
+        'i18n' => [
+            'translations' => [
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@frontend/messages',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+//                        'main' => 'main.php',
+                    ],
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

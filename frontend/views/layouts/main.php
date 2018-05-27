@@ -9,6 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use frontend\widgets\WLang;
 
 AppAsset::register($this);
 ?>
@@ -36,11 +37,6 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'RU', 'items' => [['label' => 'Русский', 'url' => 'lang=ru'],
-            '<li class="divider"></li>',
-            ['label' => 'English', 'url' => 'lang=en'],
-        ]
-        ],
         ['label' => 'Home', 'url' => ['/']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
@@ -63,9 +59,9 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
     ]);
+    echo WLang::widget();
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

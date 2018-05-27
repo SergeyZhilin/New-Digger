@@ -245,6 +245,8 @@ a:hover {
 }
 /*--nav strip start here--*/
 .header-main {
+    z-index: 1000;
+    position: fixed;
     width: 100%;
     background-color: #202121;
     padding: 1em 2em;
@@ -801,12 +803,17 @@ ul.dropdown-menu.drp-mnu li {
 .user-name span {
     font-size: .75em;
     font-style: italic;
-    color: #424f63;
+    color: snow;
     font-weight: normal;
     margin-top: .3em;
 }
 .profile_details ul {
     padding: 0px;
+}
+.border-radius {
+    width: 25%;
+    float: right;
+    border-radius: 15px;
 }
 /*--header strip end here-*/
 /*inner-block--*/
@@ -3224,7 +3231,7 @@ canvas#pie {
     margin:0% 4% 0% 0%;
 }
 .logo-name {
-    width: 37%;
+    width: 100%;
 }
 .search-box {
     float: left;
@@ -3235,12 +3242,12 @@ li.dropdown.head-dpdn a.dropdown-toggle {
 }
 .profile_details {
     float: right;
-    width: 50%;
+    /*width: 50%;*/
 }
 .fixed {
     position: fixed;
     top: 0;
-    width: 85%;
+    width: 100%;
 }
 .profile_details_drop a.dropdown-toggle {
     display: block;

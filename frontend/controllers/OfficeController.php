@@ -21,5 +21,30 @@ class OfficeController extends Controller
         return $this->render('main');
     }
 
+    /**
+     * Display profile page
+     *
+     * @return string
+     */
+    public function actionProfile()
+    {
+        $this->layout = 'office_main';
+        $this->getView()->title = 'Profile';
+
+        return $this->render('profile');
+    }
+
+    /**
+     * Display change password page
+     *
+     * @return string
+     */
+    public function actionChange_password()
+    {
+        $this->layout = 'office_main';
+        $this->getView()->title = 'Change Password';
+
+        return $this->render('change_pass');
+    }
 
 }

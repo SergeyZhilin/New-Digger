@@ -118,3 +118,27 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+.width-15 {
+    width: 15%;
+}
+#lang {
+    width: 20px;
+    height: 50px;
+    padding-left: 20px;
+}
+#lang .dropdown-menu {
+    min-width: 80px;
+    margin-left: 110px;
+}
+.dropdown {
+    height: 100%;
+}
+#btn-lang {
+    height: 100%;
+    background-color: #222;
+    border-color: #080808;
+    color: #9d9d9d;
+}
+#btn-lang:hover {
+    color: #fff;
+}
