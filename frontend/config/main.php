@@ -11,9 +11,9 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'language'=>'en',
     'components' => [
         'request' => [
-            'class' => 'frontend\components\LangRequest',
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '',
         ],
@@ -42,22 +42,25 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'class'=>'frontend\components\LangUrlManager',
+            'class' => 'frontend\widgets\MultiLang\components\UrlManager',
+            // заменяем стандартный урл.менеджер на наш.
+            'languages' => ['ru', 'en'],
+            //список языков на который переводим сайт
+            'enableDefaultLanguageUrlCode' => true,
             'rules' => [
-                '' => 'site/index',
+                '/' => 'site/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
-        'language'=>'ru-RU',
         'i18n' => [
             'translations' => [
-                '*' => [
+                'app*' => [
+                    // app название нашего php файла переводов который нужно создать app.php (может быть любым)
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@frontend/messages',
+                    // путь для нашего файла переводов frontend/messages/ru/app.php
                     'sourceLanguage' => 'en',
-                    'fileMap' => [
-//                        'main' => 'main.php',
-                    ],
+                    // язык с какого переводим, то есть, в проекте все надписи пишем на английском
                 ],
             ],
         ],
