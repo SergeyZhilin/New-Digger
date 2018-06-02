@@ -126,6 +126,15 @@ a.desc:after {
     height: 50px;
     padding-left: 20px;
 }
+#lang a{
+    color: #9d9d9d;
+    margin: 7px auto;
+}
+
+#lang a:hover{
+    /*color: #FFFFFF !important;*/
+}
+
 #lang .dropdown-menu {
     min-width: 80px;
     margin-left: 110px;
@@ -141,4 +150,7 @@ a.desc:after {
 }
 #btn-lang:hover {
     color: #fff;
+}
+.uppercase {
+    text-transform: uppercase;
 }

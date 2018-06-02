@@ -72,7 +72,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->getView()->title = 'My Yii Application';
+        $this->getView()->title = 'DIGGER-CAPITAL Invest';
         return $this->render('index');
     }
 
