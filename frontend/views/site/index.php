@@ -2,7 +2,6 @@
     .siteBackground {
         position: absolute;
         top: 0px;
-        height: 6336px;
         width: 987px;
     }
 
@@ -26,6 +25,12 @@
         background-image: url(/frontend/web/images/main-page.png);
 
     }
+    .background-img img {
+        width: 200px;
+        top: 65px;
+        left: 30px;
+        position: absolute;
+    }
 
     .index-content {
         width: 100%;
@@ -40,7 +45,6 @@
         width: 100%;
         position: static;
         top: 0px;
-        height: 6336px;
     }
 
     .page-container {
@@ -49,30 +53,30 @@
         width: 100%;
         min-width: 980px;
         position: absolute;
-        top: 127px;
-        height: 6200px;
+        top: 5%;
+        height: 2900px;
     }
 
     .titul {
         left: -117px;
-        width: 860px;
+        width: 920px;
         position: absolute;
         margin-left: calc((100% - 980px) * 0.5);
-        top: 12px;
+        top: 8%;
     }
 
     .target {
         width: 770px;
         position: absolute;
         margin-left: calc((100% - 980px) * 0.5);
-        top: 5%;
+        top: 16%;
     }
 
     .case {
         width: 770px;
         position: absolute;
         margin-left: calc((100% - 980px) * 0.5);
-        top: 51%;
+        top: 26%;
     }
 
     .case span {
@@ -92,7 +96,7 @@
     .work {
         width: 100%;
         position: absolute;
-        top: 85%;
+        top: 86%;
     }
 
     .work span {
@@ -113,13 +117,14 @@
         width: 770px;
         position: absolute;
         margin-left: calc((100% - 980px) * 0.5);
-        top: 68%;
+        top: 57%;
     }
 
     .welcome {
         width: 100%;
         position: absolute;
-        top: 97%;;
+        top: 108%;
+        margin-bottom: 20%;
     }
 
     .welcome span {
@@ -199,7 +204,7 @@
         width: 880px;
         position: absolute;
         margin-left: calc((100% - 980px) * 0.5);
-        top: 86%;
+        top: 88%;
         height: 440px;
     }
 
@@ -270,7 +275,9 @@
 <div id="SITE_CONTAINER" data-santa-render-status="SUCCESS">
     <div class="siteBackground">
         <div class="siteBackgroundcurrent">
-            <div class="background-img"></div>
+            <div class="background-img">
+                <img src="/frontend/web/images/logo.png">
+            </div>
         </div>
     </div>
     <div class="index-content">
@@ -278,6 +285,7 @@
             <div data-is-mobile="false" data-site-width="980" class="page-container">
 
                 <div class="titul">
+
                     <h1 class="font_0 text-align-center">
                         <span class="font-weight-bold">
                             <span class="font-family-open">

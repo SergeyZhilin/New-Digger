@@ -37,13 +37,13 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' =>  Yii::t('app', 'Example text...'), 'url' => ['/']],
+//        ['label' =>  Yii::t('app', 'Example text...'), 'url' => ['/']]
 //        ['label' => 'About', 'url' => ['/site/about']],
 //        ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+//        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']];
     } else {
         $menuItems[] = ['label' => 'Personal Area', 'url' => ['/office']];
         $menuItems[] = '<li>'

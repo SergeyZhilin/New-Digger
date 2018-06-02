@@ -14,6 +14,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/font.css',
+//        'css/main-page.css',
         'css/office/style.css',
         'css/office/font-awesome.css',
         'css/office/main.css',

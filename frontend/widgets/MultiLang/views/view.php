@@ -4,8 +4,8 @@ use yii\helpers\Html;
 use Yii;
 ?>
 
-<div class="btn-group <?= $cssClass; ?>">
-    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+<div id="lang" class="btn-group <?= $cssClass; ?>">
+    <a class="btn dropdown-toggle" style="color: #9d9d9d" data-toggle="dropdown" href="#">
         <span class="uppercase"><?= Yii::$app->language; ?></span>
         <span class="caret"></span>
     </a>

@@ -1,4 +1,4 @@
 <?php
 return [
-    'Example text...' => 'Пример текста...',
+    'Login' => 'Войти',
 ];
