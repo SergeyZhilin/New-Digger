@@ -49,6 +49,9 @@ return [
             'enableDefaultLanguageUrlCode' => true,
             'rules' => [
                 '/' => 'site/index',
+                'login' => 'site/login',
+                'signup' => 'site/signup',
+                'forgotpassword' => 'site/request-password-reset',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],

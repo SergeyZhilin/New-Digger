@@ -131,10 +131,6 @@ a.desc:after {
     margin: 7px auto;
 }
 
-#lang a:hover{
-    /*color: #FFFFFF !important;*/
-}
-
 #lang .dropdown-menu {
     min-width: 80px;
     margin-left: 110px;
@@ -153,4 +149,249 @@ a.desc:after {
 }
 .uppercase {
     text-transform: uppercase;
+}
+
+.login-background {
+    top: 0px;
+    background-color: #2c2c2c;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.registration-background {
+    top: 0px;
+    background-color: #2c2c2c;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.login-form-block {
+    margin: 130px auto;
+    width: 410px;
+    height: 430px;
+}
+.registration-form-block {
+     margin: 130px auto;
+     width: 410px;
+     height: 430px;
+ }
+
+.login a {
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: serif;
+    cursor: pointer;
+}
+.registration a {
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: serif;
+    cursor: pointer;
+}
+
+.login-form {
+    background-color: #3e575c;
+    width: 410px;
+    height: 290px;
+    margin-top: 50px;
+    position: absolute;
+}
+.registration-form {
+    background-color: #3e575c;
+    width: 410px;
+    height: 350px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.registration {
+    float: left;
+    width: 203px;
+    height: 56px;
+    background-color: #303030;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.login {
+    float: right;
+    width: 203px;
+    height: 56px;
+    background-color: #303030;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.active {
+    background-color: #62a2b1;
+}
+
+.forgot-password {
+    float: right;
+    margin-right: 50px;
+    margin-top: 62px;
+    font-size: 15px;
+}
+
+.forgot-password a {
+     color: #FFFFFF;
+ }
+
+.login-button {
+    width: 155px;
+    height: 45px;
+    background-color: #31a4b2;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    margin-left: 35px;
+    margin-top: 51px;
+}
+
+.signup-button{
+    width: 205px;
+    height: 45px;
+    background-color: #31a4b2;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    margin-left: 99px;
+    margin-top: 64px;
+}
+
+.login-form label {
+    display: none;
+}
+.registration-form label {
+    display: none;
+}
+.login-form .help-block-error {
+    margin: 0 auto;
+    width: 69%;
+    color: red;
+    margin-top: 10px;
+}
+.registration-form .help-block-error {
+    margin: 0 auto;
+    width: 69%;
+    color: red;
+    margin-top: 10px;
+}
+
+.login-form input[type='text'] {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 33px;
+}
+
+.login-form input[type='text']:focus {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.login-form input[type='password'] {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 33px;
+}
+.login-form input[type='password']:focus {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.registration-form input[type='text'] {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 33px;
+}
+
+.registration-form input[type='text']:focus {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.registration-form input[type='password'] {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 33px;
+}
+.registration-form input[type='password']:focus {
+    border: none;
+    border-radius: unset;
+    background-color: transparent;
+    border-bottom: 1px solid #ffffff;
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+#login-form {
+    margin-top: 33px;
+}
+
+#form-signup {
+     margin-top: 33px;
+ }
+
+input::-webkit-input-placeholder {
+    color:#FFFFFF !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: #FFFFFF !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #FFFFFF !important;
+}
+
+input:-ms-input-placeholder {
+    color: #FFFFFF !important;
 }
